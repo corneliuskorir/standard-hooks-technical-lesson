@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // TODO: Import ThemeProvider when useContext is implemented
 // TODO: Wrap <App /> with <ThemeProvider> to enable global theme state
@@ -8,6 +9,8 @@ import App from "./App";
 // Renders the main App component
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>,
 );
